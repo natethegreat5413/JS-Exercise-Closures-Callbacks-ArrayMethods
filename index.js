@@ -182,9 +182,10 @@ function lowerCaseStrings(strings) {
  * [2] Invoking `isItAnApple` with `['a', 'b', 'c' ]` will return `[ false, false, false ]`.
 */
 function isItAnApple(strings) {
-  strings.map(function(strings){
-    return (strings === 'apple')
-  }
+  return strings.map(function(strings){
+    return strings === 'apple';
+  })
+}
 
 /**
  * ### Challenge `removeApple`
@@ -203,7 +204,7 @@ function isItAnApple(strings) {
  * [2] Invoking `removeApple` with `['a', 'b', 'c' ]` will return `[ 'a', 'b', 'c' ]`.
 */
 function removeApple(strings) {
-  return strings.filter(string => string !== 'apple')
+  return strings.filter(fruit => fruit !== 'apple');
 }
 
 /**
@@ -222,7 +223,7 @@ function removeApple(strings) {
  * [2] Invoking `stringSmash` with `['a', 'b', 'c' ]` will return `abc`.
 */
 function stringSmash(strings) {
-  return strings.reduce((accumulator, strings) => accumulator + strings);
+  return strings.reduce((accumulator, item) => accumulator + item);
 }
 
 // A local community center is holding a fund raising 5k fun run and has invited
@@ -240,8 +241,10 @@ function stringSmash(strings) {
  * @returns an array with all the runners' full names in the following format: "Smith, John".
  * The full names appear in the array in the same order the runners appear in the `runners` array.
 */
-function getFullNames(/* CODE HERE */) {
-  /* CODE HERE */
+function getFullNames(runners) {
+  return runners.map(function(item){
+    return `${item.last_name}, ${item.first_name}`
+  })
 }
 
 /**
@@ -256,8 +259,10 @@ function getFullNames(/* CODE HERE */) {
  * @returns an array with all the runners' first names in ALL CAPS.
  * The first names appear in the array in the same order the runners appear in the `runners` array.
 */
-function firstNamesAllCaps(/* CODE HERE */) {
-  /* CODE HERE */
+function firstNamesAllCaps(runners) {
+  return runners.map(function(item){
+    return `${item.first_name.toUpperCase()}`
+  })
 }
 
 /**
@@ -274,8 +279,10 @@ function firstNamesAllCaps(/* CODE HERE */) {
  * @returns an array containing only the runners that use the given `tShirtSize`.
  * The runners in the array appear in the same order they appear in the `runners` array.
 */
-function getRunnersByTShirtSize(/* CODE HERE */) {
-  /* CODE HERE */
+function getRunnersByTShirtSize(runners, tShirtSize) {
+  return runners.filter(function(item){
+    
+  })
 }
 
 /**
